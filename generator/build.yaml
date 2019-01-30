@@ -9,7 +9,7 @@ builders:
     target: ":resource_generator"
     import: "package:resource_generator/builder.dart"
     builder_factories: ["genarator"]
-    build_extensions: {".dart": [".flutter_resource.g.part"]}
+    build_extensions: {".dart": [".resource_generator.g.part"]}
     auto_apply: dependents
     build_to: cache
     applies_builders: ["source_gen|combining_builder"]
