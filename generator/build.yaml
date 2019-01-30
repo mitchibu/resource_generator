@@ -1,0 +1,15 @@
+targets:
+  $default:
+    builders:
+      resource_generator|resource_generator_annotation:
+        enabled: true
+
+builders:
+  resource_generator:
+    target: ":resource_generator"
+    import: "package:resource_generator/builder.dart"
+    builder_factories: ["genarator"]
+    build_extensions: {".dart": [".flutter_resource.g.part"]}
+    auto_apply: dependents
+    build_to: cache
+    applies_builders: ["source_gen|combining_builder"]
